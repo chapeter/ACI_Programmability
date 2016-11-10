@@ -86,6 +86,11 @@ response: {"totalCount":"0","imdata":[]}
 
 [item]: # (/slide)
 
+[item]: # (slide)
+##Labs
+* [Devnet Learning Lab - ACI 102 - API Overview](https://learninglabs.cisco.com/lab/aci-102-api-overview/step/1)
+* [Devnet Learning Lab - ACI 103 - API Inspector](https://learninglabs.cisco.com/lab/aci-103-building-a-simple-script/step/1)
+
 ---
 
 [item]: # (slide)
