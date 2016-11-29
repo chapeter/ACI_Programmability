@@ -1,0 +1,7 @@
+.idea/
+.vagrant/
+.virtualenv
+.virtalenv
+drone_secrets.yml
+drone_secrets.yml.example
+testdb.json
