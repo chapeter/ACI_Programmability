@@ -18,7 +18,7 @@ Need to put some stuff in here
  
 [item]: # (slide)
 #ACI REST API
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-rest-schema-1.jpg)
+![](images/aci-rest-schema-1.jpg)
 The API schema follows ACI's Object Model
 
 [item]: # (/slide)
@@ -41,19 +41,19 @@ The API schema follows ACI's Object Model
 
 [item]: # (slide)
 ## REST API: Create/Update Operations
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-rest-create.jpg)
+![](images/aci-rest-create.jpg)
 
 [item]: # (/slide)
 
 [item]: # (slide)
 ## REST API: Read Operation
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-rest-read.jpg)
+![](images/aci-rest-read.jpg)
 
 [item]: # (/slide)
 
 [item]: # (slide)
 ## REST API Inspector
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-api-inspector-1.png)
+![](images/aci-api-inspector-1.png)
 
 [item]: # (/slide)
 
@@ -65,7 +65,7 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 [item]: # (slide)
 
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-api-inspector-2.png)
+![](images/aci-api-inspector-2.png)
 
 [item]: # (/slide)
 
@@ -73,7 +73,7 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 [item]: # (slide)
 ###Example of creating a Tenant in the GUI
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-api-inspector-3.png)
+![](images/aci-api-inspector-3.png)
 
 We can see the interesting code here:
 
