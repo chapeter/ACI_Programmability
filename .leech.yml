@@ -6,7 +6,7 @@ reveal:
   template:
   template_color: FFFFFF
   intro:
-  intro_title: Your Fancy Title
+  intro_title: ACI Programmability Intro
   intro_author: Chad Peterson
   intro_color: 049FD9
   closing:
