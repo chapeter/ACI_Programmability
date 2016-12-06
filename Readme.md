@@ -387,3 +387,19 @@ md.commit(c)
 ```
 
 * Adjust code to your liking and run
+
+## Create a snapshot
+```
+from acitoolkit import acitoolkit
+session = acitoolkit.Session(apic_url, apic_user, apic_Password)
+session.login()
+snap_name = "CR112345"
+tenant = "/uni/tn-chapeter"
+#To post for all tenants tenant = ""
+
+snaphot_body = {"configExportP": {"attributes":{"dn":"uni/fabric/configexp-{}".format(snap_name),"name":"{}".format(snap_name), "snapshot":"true","adminSt":"triggered","rn":"configexp-{}".format(snap_name),"targetDN":"{}".format(tenant),"status":"created,modified"}, "children":[]}}
+
+resp = session.push_to_apic("/api/node/mo/uni/fabric/configexp-{}.json".format(snap_name), snapshot_body)
+print(resp)
+print(resp.text)
+```
