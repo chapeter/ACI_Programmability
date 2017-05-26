@@ -1,13 +1,18 @@
-###Object Lookup
+###Authentication
+The SDK takes care of staying logged into the fabric for you.  Example code to handle login and session.
 
-Objects can be looked up using various methods
+```python
+import cobra.mit.access
+import cobra.mit.session
 
-* Lookup by DN:
-```python
-uniMo = md.lookupByDn('uni')
-```
-* Lookup by Class:
-```python
-uniMo = md.lookupByClass('polUni')
+APIC_URL = 'http://<APIC_IP>'
+APIC_USERNAME = 'username'
+APIC_PASSWORD = 'password'
+
+ls = cobra.mit.session.LoginSession(APIC_URL, APIC_USERNAME, APIC_PASSWORD)
+
+md = cobra.mit.access.MoDirectory(ls)
+
+md.login()
 ```
 

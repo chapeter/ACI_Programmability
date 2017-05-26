@@ -1,18 +1,7 @@
-###Authentication
-The SDK takes care of staying logged into the fabric for you.  Example code to handle login and session.
+###Installing the SDK
 
-```python
-import cobra.mit.access
-import cobra.mit.session
-
-APIC_URL = 'http://<APIC_IP>'
-APIC_USERNAME = 'username'
-APIC_PASSWORD = 'password'
-
-ls = cobra.mit.session.LoginSession(APIC_URL, APIC_USERNAME, APIC_PASSWORD)
-
-md = cobra.mit.access.MoDirectory(ls)
-
-md.login()
+```
+$ easy_install -Z acicobra-1.1_1j-py2.7.egg
+$ easy_install -Z acimodel-1.1_1j-py2.7.egg
 ```
 

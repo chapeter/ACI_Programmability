@@ -1,7 +1,5 @@
-#[ACI Toolkit](http://github.com/datacenter/acitoolkit)
-ACI toolkit is a community driven project whith a goal of lowering the bar of entry to programmatically control the ACI fabric.  ACI Toolkit is not 100% comprehensive and does not include the full ACI object model.
-
-In addtion to the simplified model, ACI toolkit also includes useful utilities.
-
-[http://github.com/datacenter/acitoolkit](http://github.com/datacenter/acitoolkit)
+##Links
+* [APIC Rest API User Guide](http://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide.html)
+* [SDK Source Code and Documentation](https://github.com/datacenter/cobra)
+* [Code Examples](https://github.com/datacenter/aci)
 

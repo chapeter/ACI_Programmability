@@ -1,9 +1,7 @@
-##Installation
-The easiest way to get started using the ACI Toolkit is to install via pip
+#[ACI Toolkit](http://github.com/datacenter/acitoolkit)
+ACI toolkit is a community driven project whith a goal of lowering the bar of entry to programmatically control the ACI fabric.  ACI Toolkit is not 100% comprehensive and does not include the full ACI object model.
 
-```
-$ pip install acitoolkit
-```
+In addtion to the simplified model, ACI toolkit also includes useful utilities.
 
-You can also download and install from github, instructions included there
+[http://github.com/datacenter/acitoolkit](http://github.com/datacenter/acitoolkit)
 

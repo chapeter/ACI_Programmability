@@ -1,14 +1,8 @@
-###Downloading the SDK
-The SDK eggs are stored on the APIC controller in the following location:
-
-```
-http[s]://<APIC_URL>/cobra/_downloads
-```
-
-Download the Eggs:
-
-```
-$ wget http://<APIC_URL>/cobra/_downloads/acicobra-2.0_1o-py2.7.egg
-$ wget http://<APIC_URL/cobra/_downloads/acimodel-2.0_1o-py2.7.egg
-```
+#ACI's Python SDK
+* Cobra is a native Python language binding for APIC REST API
+* Supports lookups, creations, modifications, deletions
+* Objects in Cobra are a 1:1 representation of objects in the MIT
+  * As a result, policy created via GUI/JSON/XML can be used as a programming template, for more rapid development
+  * All data has client side consistency checks performed
+* Packaged as .egg, install with easy_install
 

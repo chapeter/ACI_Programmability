@@ -1,5 +1,18 @@
-##Links
-* [APIC Rest API User Guide](http://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide.html)
-* [SDK Source Code and Documentation](https://github.com/datacenter/cobra)
-* [Code Examples](https://github.com/datacenter/aci)
+###Example 2
+Example 3 tier app creation using SDK
+
+```python
+from cobra.model.fv import *
+from cobra.model.pol import Uni
+uniMo = Uni('')
+t = Tenant(uniMo, 'Tenant1')
+ap = Ap(t, 'Exchange')
+epg1 = AEPg(ap, 'OWA')
+epg2 = AEPg(ap, 'FrontEnd')
+epg3 = AEPg(ap, 'MailBox')
+ep = RsPathAtt(epg1, tDn=‘topology/pod-1/paths-17/paths-[eth1/1]’, mode=‘regular’, encap=‘vlan-10’)
+c = ConfigRequest()
+c.addMo(t)
+moDir.commit(c)
+```
 

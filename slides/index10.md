@@ -1,5 +1,5 @@
 ###Example of creating a Tenant in the GUI
-![](https://github.com/chapeter/ACI_Programmability_Intro/tree/master/images/aci-api-inspector-3.png)
+![](images/aci-api-inspector-3.png)
 
 We can see the interesting code here:
 

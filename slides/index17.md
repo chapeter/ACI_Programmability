@@ -1,7 +1,14 @@
-###Example 2
-Example 3 tier app creation using SDK
+###Example 1
+Example Tenant Creation using SDK
 
 ```python
-from cobra.model.fv import *from cobra.model.pol import UniuniMo = Uni('')t = Tenant(uniMo, 'Tenant1')ap = Ap(t, 'Exchange')epg1 = AEPg(ap, 'OWA')epg2 = AEPg(ap, 'FrontEnd')epg3 = AEPg(ap, 'MailBox')ep = RsPathAtt(epg1, tDn=‘topology/pod-1/paths-17/paths-[eth1/1]’, mode=‘regular’, encap=‘vlan-10’)c = ConfigRequest()c.addMo(t)moDir.commit(c)
+from cobra.model.fv import Tenant
+from cobra.model.pol import Uni
+from cobra.mit.request import ConfigRequest
+uniMo = Uni('')  # Uni is a static Mo, so we don’t need to look it up
+t = Tenant(uniMo, 'Tenant1')  # We create a tenant as a child of the universe
+c = ConfigRequest()  # Create a ConfigRequest to contain our new object
+c.addMo(t)  # Add our tenant to the ConfigRequest
+moDir.commit(c)  # Commit our configuration request
 ```
 
