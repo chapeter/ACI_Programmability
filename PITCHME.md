@@ -6,6 +6,7 @@ This guide is intended to be used as an introduction to how you can interact wit
 ## Main Topics
 * System Overview
 * ACI REST API
+* Visore
 * ACI Python SDK
 * ACI Tool Kit
 * Ansible
@@ -67,24 +68,12 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 
 ---
-### Example of creating a Tenant in the GUI
+### Example of deleting a Tenant in the GUI
 ![](images/aci-api-inspector-3.png)
 
 
 ---?gist=chapeter/27447b0fa4db9dbd86bd29c318203561
 
----
-### Example of creating a Tenant in the GUI
-![](images/aci-api-inspector-3.png)
-
-We can see the interesting code here:
-
-```json
-method: POST
-url: http://10.94.238.68/api/node/mo/uni.json
-payload{"polUni":{"attributes":{"dn":"uni","status":"modified"},"children":[{"fvTenant":{"attributes":{"dn":"uni/tn-imapex101","status":"deleted"},"children":[]}}]}}
-response: {"totalCount":"0","imdata":[]}
-```
 
 
 
@@ -94,9 +83,28 @@ response: {"totalCount":"0","imdata":[]}
 * [Devnet Learning Lab - ACI 103 - API Inspector](https://learninglabs.cisco.com/lab/aci-103-building-a-simple-script/step/1)
 
 ---
+# Visore
+
+@snap[west]
+
+Webpage hosted on APIC
+
+http://<apic-ip>/visore.html
+
+Navigate the object model
+
+@snapend
+
+@snap[east]
+
+![](images/aci-visore-1.png)
+
+@snapend
+---
+# Postman Demo
 
 ---
-# ACI's Python SDK
+## ACI's Python SDK
 * Cobra is a native Python language binding for APIC REST API
 * Supports lookups, creations, modifications, deletions
 * Objects in Cobra are a 1:1 representation of objects in the MIT
