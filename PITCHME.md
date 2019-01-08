@@ -85,6 +85,10 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 ---
 # Visore
 
+
+
+---?image=images/aci-visore-1.pngposition=right
+
 @snap[west]
 
 Webpage hosted on APIC
@@ -95,7 +99,6 @@ Navigate the object model
 
 @snapend
 
----?image=template/img/bg/orange.jpg&position=right
 ---
 # Postman Demo
 
