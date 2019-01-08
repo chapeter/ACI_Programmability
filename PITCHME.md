@@ -89,12 +89,10 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 ---
 
-@snap[west]
-@ul
+@snap[west sidebar]
 - Webpage hosted on APIC
 - http://<apic-ip>/visore.html
 - Navigate the object model
-@ulend
 @snapend
 
 @snap[east sidebar]
