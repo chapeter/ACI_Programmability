@@ -97,6 +97,10 @@ http://<apic-ip>/visore.html
 Navigate the object model
 @snapend
 
+@snap[north]
+North
+@snapend
+
 ---
 # Postman Demo
 
