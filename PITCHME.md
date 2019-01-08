@@ -98,7 +98,7 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 @snapend
 
 @snap[east]
-![](images/aci-visore-1.png)
+![VISORE](images/aci-visore-1.png)
 @snapend
 
 ---
