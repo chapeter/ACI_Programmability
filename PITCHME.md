@@ -414,3 +414,19 @@ print(resp.text)
 
 ---
 # Ansible
+
+---
+
+# Other useful apps
+
+---
+
+#### Initial Deployment
+* https://github.com/carlniger/acipdt
+* https://github.com/chapeter/acibootstrap
+
+---
+
+#### Migrations
+
+* https://github.com/imapex/acimigrate
