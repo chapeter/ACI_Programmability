@@ -1,16 +1,17 @@
-This guide is intended to be used as an intoduction to how you can interact with ACI in a programatic fashion.
+This guide is intended to be used as an introduction to how you can interact with ACI in a programatic fashion.
 
----
++++
 ## Main Topics
 * System Overview
 * ACI REST API
 * ACI Python SDK
 * ACI Tool Kit
+* Ansible
 * References
 
 
 
----
++++
 ## System Overview
 Need to put some stuff in here
 
