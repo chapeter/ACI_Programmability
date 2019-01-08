@@ -87,7 +87,7 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 
 
----?image=images/aci-visore-1.pngposition=right
+---?image=images/aci-visore-1.png&position=right
 
 @snap[west]
 
