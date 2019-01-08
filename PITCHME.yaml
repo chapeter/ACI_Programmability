@@ -1,0 +1,4 @@
+theme : night
+highlight : solarized-dark
+code-line-numbers : true
+transition : fade

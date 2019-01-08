@@ -1,6 +1,8 @@
+
 This guide is intended to be used as an introduction to how you can interact with ACI in a programatic fashion.
 
-+++
+---
+
 ## Main Topics
 * System Overview
 * ACI REST API
@@ -11,14 +13,9 @@ This guide is intended to be used as an introduction to how you can interact wit
 
 
 
-+++
-## System Overview
-Need to put some stuff in here
-
-
 
 ---
-# ACI REST API
+## ACI REST API
 ![](images/aci-rest-schema-1.jpg)
 The API schema follows ACI's Object Model
 
@@ -54,7 +51,7 @@ The API schema follows ACI's Object Model
 
 ---
 ## REST API Inspector
-![](images/aci-api-inspector-1.png)
+![](images/aci-api-inspector-0.png)
 
 
 
@@ -62,7 +59,7 @@ To open the API Inspector, click your name in the top right corner of the ACI GU
 
 ---
 
-The APIC inspector will show all the API calls the APIC GUI makes while you are using it.  This is a great reasorce to get started.
+The APIC inspector will show all the API calls the APIC GUI makes while you are using it.  This is a great resource to get started.
 
 ---
 
@@ -70,7 +67,9 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 
 
 
+---
 
+---?gist=chapeter/27447b0fa4db9dbd86bd29c318203561
 
 ---
 ### Example of creating a Tenant in the GUI
