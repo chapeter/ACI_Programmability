@@ -95,11 +95,7 @@ Navigate the object model
 
 @snapend
 
-@snap[east]
-
-![](images/aci-visore-1.png)
-
-@snapend
+---?image=template/img/bg/orange.jpg&position=right
 ---
 # Postman Demo
 
