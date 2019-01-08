@@ -66,8 +66,10 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 ![](images/aci-api-inspector-2.png)
 
 
-
 ---
+### Example of creating a Tenant in the GUI
+![](images/aci-api-inspector-3.png)
+
 
 ---?gist=chapeter/27447b0fa4db9dbd86bd29c318203561
 
