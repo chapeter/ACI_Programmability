@@ -90,11 +90,11 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 ---
 
 @snap[west sidebar]
-
-* Webpage hosted on APIC
-* http://<apic-ip>/visore.html
-* Navigate the object model
-
+<ul>
+<li>Webpage hosted on APIC</li>
+<li>http://<apic-ip>/visore.html</li>
+<li>Navigate the object model</li>
+</ul>
 @snapend
 
 @snap[east sidebar]
