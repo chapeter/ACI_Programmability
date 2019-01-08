@@ -1,4 +1,4 @@
 theme : Moon
-highlight : solarized-dark
+#highlight : solarized-dark
 code-line-numbers : true
 transition : fade

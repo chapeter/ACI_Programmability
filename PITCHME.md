@@ -102,14 +102,14 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 @snapend
 
 ---
-# Postman Demo
+# Demo
 
 ---
-## ACI's Python SDK
-* Cobra is a native Python language binding for APIC REST API
+### ACI's Python SDK
+* Python language binding for APIC REST API
 * Supports lookups, creations, modifications, deletions
 * Objects in Cobra are a 1:1 representation of objects in the MIT
-  * As a result, policy created via GUI/JSON/XML can be used as a programming template, for more rapid development
+  * Policy created via GUI/JSON/XML can be used as a programming template, for more rapid development
   * All data has client side consistency checks performed
 * Packaged as .egg, install with easy_install
 
@@ -176,12 +176,6 @@ uniMo = md.lookupByDn('uni')
 ```python
 uniMo = md.lookupByClass('polUni')
 ```
-
-
-
----
-### Object Creation
-TODO - Add content
 
 
 
@@ -258,7 +252,9 @@ You can also download and install from github, instructions included there
 
 ---
 ## Arya
-One of the more useful tools when learning to programmatically work with ACI is Arya. Arya translates from ACI Rest to Python (ACI Cobra SDK).
+One of the more useful tools when learning to programmatically work with ACI is Arya.
+
+Arya translates from ACI Rest to Python (ACI Cobra SDK).
 
 
 
@@ -313,8 +309,7 @@ This is an extreamly useful way to learn the object model and how to work with A
 
 
 ---
-# Use Case with workflow
-## Print List of Subnets
+#### Example - Print List of Subnets
 * Find Subnet object Class name
     * Open Visore
     * We know Subnets live under BD inside a Tenant, so start with the top level search of: fvTenant
@@ -326,6 +321,7 @@ This is an extreamly useful way to learn the object model and how to work with A
         * Switch .xml for .json We are left with ``` /api/node/class/fvSubnet.json ```
         * Use ACI Toolkit to do a simple api call
 
++++
 ```python
 from acitoolkit import acitoolkit
 session = acitoolkit.Session(<url>, <user>, <password>)
@@ -354,6 +350,7 @@ for subnet in subnets:
 * Download created subnet from APIC
 * Plug subnet configuration into Arya / WebArya
 
++++
 ```python
 CHAPETER-M-V072:~ chapeter$ arya -f ~/Downloads/subnet-\[172.16.10.1-24\].json
 #!/usr/bin/env python
@@ -399,8 +396,8 @@ md.commit(c)
 
 * Adjust code to your liking and run
 
-## Create a snapshot
-```
+#### Create a snapshot
+```python
 from acitoolkit import acitoolkit
 session = acitoolkit.Session(apic_url, apic_user, apic_Password)
 session.login()
@@ -414,3 +411,6 @@ resp = session.push_to_apic("/api/node/mo/uni/fabric/configexp-{}.json".format(s
 print(resp)
 print(resp.text)
 ```
+
+---
+# Ansible
