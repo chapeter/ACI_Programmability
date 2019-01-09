@@ -10,7 +10,6 @@ This guide is intended to be used as an introduction to how you can interact wit
 * ACI Python SDK
 * ACI Tool Kit
 * Ansible
-* References
 
 
 
@@ -21,7 +20,6 @@ This guide is intended to be used as an introduction to how you can interact wit
 The API schema follows ACI's Object Model
 
 
-
 ---
 ## Supported REST Methods
 | Method | Action|
@@ -30,6 +28,15 @@ The API schema follows ACI's Object Model
 | GET | Read |
 | DELETE | Delete |
 
+---
+### Classes and MOs
+examples:
+* fvTenant = Tenant
+* fvCtx = VRF (this was originally called
+* Context)
+* fvBD = Bridge Domain
+* fvAp = Application
+* l3extOut = Layer 3 External Out
 
 
 ---
@@ -102,6 +109,17 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 @snapend
 
 ---
+# Tools
+
+---
+## [Postman](https://www.getpostman.com/)
+
+API tool used used to make API calls.  
+
+Has extended features to automate and collaborate.
+
+---
+
 # Demo
 
 ---
@@ -414,6 +432,119 @@ print(resp.text)
 
 ---
 # Ansible
+
+---
+
+I don't plan to go into details with how ansible works, but will highlight some ways to interact with ACI via ansible using useful modules
+
+---
+
+### [aci_rest](https://docs.ansible.com/ansible/latest/modules/aci_rest_module.html#aci-rest-module)
+
+aci_rest is a basic wrapper to send commands to aci via its API.  It will handle authentication and remains idempotent.
+
+Very useful if an module has not been written for the task you want to complete.
+
+Content can sent multiple ways
+
+You can find all the ACI modules here:
+[https://docs.ansible.com/ansible/latest/modules/list_of_network_modules.html#aci-network-modules](https://docs.ansible.com/ansible/latest/modules/list_of_network_modules.html#aci-network-modules)
+
+---
+### aci_rest inline YAML
+
+```yaml
+- name: Add a tenant using inline YAML
+  aci_rest:
+    host: apic
+    username: admin
+    private_key: pki/admin.key
+    validate_certs: no
+    path: /api/mo/uni.json
+    method: post
+    content:
+      fvTenant:
+        attributes:
+          name: Sales
+          descr: Sales departement
+  delegate_to: localhost
+```
+
+---
+### aci_rest inline templated payload
+
+```yaml
+- name: Add a tenant from a templated payload file from templates/
+  aci_rest:
+    host: apic
+    username: admin
+    private_key: pki/admin.key
+    method: post
+    path: /api/mo/uni.xml
+    content: "{{ lookup('template', 'aci/tenant.xml.j2') }}"
+  delegate_to: localhost
+```
+
+---
+
+### aci_rest inline JSON string
+
+``` yaml
+
+- name: Add a tenant using a JSON string
+  aci_rest:
+    host: apic
+    username: admin
+    private_key: pki/admin.key
+    validate_certs: no
+    path: /api/mo/uni.json
+    method: post
+    content:
+      {
+        "fvTenant": {
+          "attributes": {
+            "name": "Sales",
+            "descr": "Sales departement"
+          }
+        }
+      }
+  delegate_to: localhost
+```
+
+---
+
+### aci_rest inline XML string
+
+```yaml
+- name: Add a tenant using an XML string
+  aci_rest:
+    host: apic
+    username: admin
+    private_key: pki/{{ aci_username}}.key
+    validate_certs: no
+    path: /api/mo/uni.xml
+    method: post
+    content: '<fvTenant name="Sales" descr="Sales departement"/>'
+  delegate_to: localhost
+```
+
+---
+
+### aci_config_snapshot
+
+Used to create new snapshots
+
+```yaml
+- name: Create a Snapshot
+  aci_config_snapshot:
+    host: "{{ ansible_host }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    #private_key: pki/aci_admin.key
+    validate_certs: "{{ validate }}"
+    description: "{{ snapshot_name }}"
+    export_policy: defaultOneTime
+```
 
 ---
 
