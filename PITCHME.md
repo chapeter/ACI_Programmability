@@ -1,10 +1,12 @@
+## ACI Programmability Intro
 
 This guide is intended to be used as an introduction to how you can interact with ACI in a programatic fashion.
+
+Chad Peterson - chapeter@cisco.com
 
 ---
 
 ## Main Topics
-* System Overview
 * ACI REST API
 * Visore
 * ACI Python SDK
