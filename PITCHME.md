@@ -91,6 +91,9 @@ The APIC inspector will show all the API calls the APIC GUI makes while you are 
 * [Devnet Learning Lab - ACI 102 - API Overview](https://learninglabs.cisco.com/lab/aci-102-api-overview/step/1)
 * [Devnet Learning Lab - ACI 103 - API Inspector](https://learninglabs.cisco.com/lab/aci-103-building-a-simple-script/step/1)
 
+## Useful Links
+* [https://developer.cisco.com/site/aci/](https://developer.cisco.com/site/aci/)
+
 ---
 # Visore
 
